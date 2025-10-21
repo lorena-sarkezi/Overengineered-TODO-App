@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Todo.App.DependencyInjection;
+using Todo.Base.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Todo.Base.ApplicationOptions;
 
-namespace Todo.App.DependencyInjection;
+namespace Todo.Base.DependencyInjection;
 
 public static class ApplicationOptions
 {
