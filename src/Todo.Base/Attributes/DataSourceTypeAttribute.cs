@@ -1,7 +1,6 @@
-﻿using System;
-using Todo.Base.Enums;
+﻿using Todo.Base.Enums;
 
-namespace Todo.App.Attributes;
+namespace Todo.Base.Attributes;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class DataSourceTypeAttribute : Attribute

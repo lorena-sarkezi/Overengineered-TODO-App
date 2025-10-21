@@ -1,10 +1,9 @@
-﻿using Todo.App.Attributes;
-using Todo.Base.Enums;
+﻿using Todo.Base.Enums;
 using Todo.Base.Services.DatabaseConnection;
 
-namespace Todo.App.Database;
+namespace Todo.Base.Attributes;
 
-[DataSourceType(DatasourceTypeEnum.AppSettings)]
+[DataSourceType(DatasourceTypeEnum.Keyvault)]
 public class KeyVaultDatabaseConnectionProvider : IDatabaseConnectionProvider
 {
     public string GetConnectionString()
