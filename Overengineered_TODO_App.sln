@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Main", "src\Todo.Main\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Base", "src\Todo.Base\Todo.Base.csproj", "{DEBD7083-D481-4A47-9328-69379992E2C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.App", "Todo.App\Todo.App.csproj", "{17406E10-34DC-4EFE-82D6-3B21D35DFE0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.App", "src\Todo.App\Todo.App.csproj", "{17406E10-34DC-4EFE-82D6-3B21D35DFE0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
