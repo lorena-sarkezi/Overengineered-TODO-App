@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.Services.AddDatabaseOptions(builder.Configuration);
+builder.Services.AddDatabaseConnectionProviders();
 
 builder.Services.AddControllers();
 
