@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "EUzJPRCQ4JA=",
-  "success": false,
+  "dgSpecHash": "oKAlMvJAqdA=",
+  "success": true,
   "projectFilePath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lorena\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0-rc.2.25502.107\\microsoft.extensions.configuration.10.0.0-rc.2.25502.107.nupkg.sha512",
@@ -14,17 +14,5 @@
     "C:\\Users\\Lorena\\.nuget\\packages\\microsoft.extensions.options.dataannotations\\10.0.0-rc.2.25502.107\\microsoft.extensions.options.dataannotations.10.0.0-rc.2.25502.107.nupkg.sha512",
     "C:\\Users\\Lorena\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.0-rc.2.25502.107\\microsoft.extensions.primitives.10.0.0-rc.2.25502.107.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj'. Check that the project reference is valid and that the project file exists.",
-      "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.App.csproj",
-      "filePath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.App.csproj",
-      "libraryId": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

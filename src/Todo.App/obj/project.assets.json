@@ -174,6 +174,22 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "Todo.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "10.0.0-rc.2.25502.107",
+          "Microsoft.Extensions.Options": "10.0.0-rc.2.25502.107",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.0-rc.2.25502.107",
+          "Microsoft.Extensions.Options.DataAnnotations": "10.0.0-rc.2.25502.107"
+        },
+        "compile": {
+          "bin/placeholder/Todo.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Todo.Base.dll": {}
+        }
       }
     }
   },
@@ -472,15 +488,20 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Todo.Base/1.0.0": {
+      "type": "project",
+      "path": "../Todo.Base/Todo.Base.csproj",
+      "msbuildProject": "../Todo.Base/Todo.Base.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj",
       "Microsoft.Extensions.DependencyInjection >= 10.0.0-rc.2.25502.107",
       "Microsoft.Extensions.Options >= 10.0.0-rc.2.25502.107",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 10.0.0-rc.2.25502.107",
-      "Microsoft.Extensions.Options.DataAnnotations >= 10.0.0-rc.2.25502.107"
+      "Microsoft.Extensions.Options.DataAnnotations >= 10.0.0-rc.2.25502.107",
+      "Todo.Base >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -515,8 +536,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj": {
-              "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj"
+            "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.Base\\Todo.Base.csproj": {
+              "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.Base\\Todo.Base.csproj"
             }
           }
         }
@@ -573,16 +594,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.Base\\Todo.Base.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

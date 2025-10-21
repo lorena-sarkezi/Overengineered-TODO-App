@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include=".\Todo.Base\Todo.Base.csproj" />
+      <ProjectReference Include="..\Todo.Base\Todo.Base.csproj" />
     </ItemGroup>
 
 </Project>

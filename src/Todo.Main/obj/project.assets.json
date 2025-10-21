@@ -571,8 +571,8 @@
     },
     "Todo.App/1.0.0": {
       "type": "project",
-      "path": "../../Todo.App/Todo.App.csproj",
-      "msbuildProject": "../../Todo.App/Todo.App.csproj"
+      "path": "../Todo.App/Todo.App.csproj",
+      "msbuildProject": "../Todo.App/Todo.App.csproj"
     },
     "Todo.Base/1.0.0": {
       "type": "project",
@@ -619,11 +619,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.App.csproj": {
+              "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.App\\Todo.App.csproj"
+            },
             "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.Base\\Todo.Base.csproj": {
               "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\src\\Todo.Base\\Todo.Base.csproj"
-            },
-            "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\Todo.App\\Todo.App.csproj": {
-              "projectPath": "C:\\Users\\Lorena\\RiderProjects\\Overengineered_TODO_App\\Todo.App\\Todo.App.csproj"
             }
           }
         }
