@@ -2,7 +2,7 @@
 using Todo.App.Database;
 using Todo.Base.Attributes;
 
-namespace Todo.App.ServiceCollections;
+namespace Todo.App.DependencyInjection;
 
 public static class DatabaseConnectionProvider
 {

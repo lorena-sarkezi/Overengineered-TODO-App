@@ -1,4 +1,4 @@
-﻿namespace Todo.App.ApplicationOptions;
+﻿namespace Todo.Base.ApplicationOptions;
 
 public class DatabaseOptions
 {

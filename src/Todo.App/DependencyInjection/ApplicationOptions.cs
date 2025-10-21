@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Todo.App.ApplicationOptions;
+using Todo.Base.ApplicationOptions;
 
-namespace Todo.Base.ServiceCollections;
+namespace Todo.App.DependencyInjection;
 
 public static class ApplicationOptions
 {
