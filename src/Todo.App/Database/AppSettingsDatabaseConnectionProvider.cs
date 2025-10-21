@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
+using Todo.Base.Abstractions.Services.DatabaseConnection;
 using Todo.Base.ApplicationOptions;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
-using Todo.Base.Services.DatabaseConnection;
 
 namespace Todo.App.Database;
 

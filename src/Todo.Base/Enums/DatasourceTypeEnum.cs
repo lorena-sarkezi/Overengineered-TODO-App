@@ -3,5 +3,5 @@
 public enum DatasourceTypeEnum
 {
     AppSettings,
-    Keyvault
+    AzureKeyVault
 }

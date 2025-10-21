@@ -1,4 +1,4 @@
-﻿namespace Todo.Base.Services.DatabaseConnection;
+﻿namespace Todo.Base.Abstractions.Services.DatabaseConnection;
 
 public interface IDatabaseConnectionProvider
 {
