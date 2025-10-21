@@ -6,7 +6,7 @@ using Todo.Base.Enums;
 
 namespace Todo.App.Database;
 
-[DataSourceType(DatasourceTypeEnum.AppSettings)]
+[DataSourceType(DataSourceTypeEnum.AppSettings)]
 public class AppSettingsDatabaseConnectionProvider : IDatabaseConnectionProvider
 {
     private readonly IOptions<DatabaseOptions> _options;

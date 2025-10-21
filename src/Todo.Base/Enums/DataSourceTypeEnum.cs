@@ -1,6 +1,6 @@
 ﻿namespace Todo.Base.Enums;
 
-public enum DatasourceTypeEnum
+public enum DataSourceTypeEnum
 {
     AppSettings,
     AzureKeyVault

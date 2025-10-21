@@ -3,7 +3,7 @@ using Todo.Base.Enums;
 
 namespace Todo.Base.Attributes;
 
-[DataSourceType(DatasourceTypeEnum.AzureKeyVault)]
+[DataSourceType(DataSourceTypeEnum.AzureKeyVault)]
 public class KeyVaultDatabaseConnectionProvider : IDatabaseConnectionProvider
 {
     public string GetConnectionString()

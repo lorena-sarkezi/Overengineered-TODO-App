@@ -6,10 +6,10 @@ namespace Todo.Base.Attributes;
 [AttributeUsage(AttributeTargets.Class)]
 public class DataSourceTypeAttribute : Attribute
 {
-    public DatasourceTypeEnum DatabaseDatasourceType;
+    public DataSourceTypeEnum DatabaseDataSourceType;
 
-    public DataSourceTypeAttribute(DatasourceTypeEnum datasourceType)
+    public DataSourceTypeAttribute(DataSourceTypeEnum dataSourceType)
     {
-        DatabaseDatasourceType = datasourceType;
+        DatabaseDataSourceType = dataSourceType;
     }
 }
