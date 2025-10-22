@@ -13,3 +13,5 @@
 /dataSources.local.xml
 obj
 bin
+.vs
+/Overengineered_TODO_App.sln.DotSettings.user
