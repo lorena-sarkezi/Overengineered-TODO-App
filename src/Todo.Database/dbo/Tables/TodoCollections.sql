@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Todos]
+﻿CREATE TABLE [dbo].[TodoCollections]
 (
     [Id] INT IDENTITY(1,1),
     [UserId] INT NOT NULL,
