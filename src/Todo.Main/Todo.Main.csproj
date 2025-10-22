@@ -9,11 +9,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Todo.App\Todo.App.csproj" />
       <ProjectReference Include="..\Todo.Base\Todo.Base.csproj" />
+      <ProjectReference Include="..\Todo.Entities\Todo.Entities.csproj" />
     </ItemGroup>
 
 </Project>
