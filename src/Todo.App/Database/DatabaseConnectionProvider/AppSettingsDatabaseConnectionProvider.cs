@@ -4,10 +4,10 @@ using Todo.Base.ApplicationOptions;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
 
-namespace Todo.App.Database;
+namespace Todo.App.Database.DatabaseConnectionProvider;
 
 [DataSourceType(DataSourceTypeEnum.AppSettings)]
-public class AppSettingsDatabaseConnectionProvider : IDatabaseConnectionProvider
+internal class AppSettingsDatabaseConnectionProvider : IDatabaseConnectionProvider
 {
     private readonly IOptions<DatabaseOptions> _options;
     public AppSettingsDatabaseConnectionProvider(IOptions<DatabaseOptions> options)

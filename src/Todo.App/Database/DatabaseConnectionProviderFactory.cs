@@ -9,7 +9,7 @@ using Todo.Base.Enums;
 
 namespace Todo.App.Database;
 
-public class DatabaseConnectionProviderFactory : IDatabaseConnectionProviderFactory
+internal class DatabaseConnectionProviderFactory : IDatabaseConnectionProviderFactory
 {
     private readonly Dictionary<DataSourceTypeEnum, IDatabaseConnectionProvider> _providersMapping;
     
