@@ -6,10 +6,8 @@ namespace Todo.Infrastructure.DependencyInjection;
 
 public static class Azure
 {
-    public static IServiceCollection AddAzureInfrastructure(this IServiceCollection services)
+    public static void AddAzureInfrastructure(this IServiceCollection services)
     {
         services.AddSingleton<IKeyVaultClient, KeyVaultClient>();
-        
-        return services;
     }
 }

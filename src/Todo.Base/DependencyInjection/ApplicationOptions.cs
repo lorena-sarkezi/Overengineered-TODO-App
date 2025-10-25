@@ -6,12 +6,10 @@ namespace Todo.Base.DependencyInjection;
 
 public static class ApplicationOptions
 {
-    public static IServiceCollection AddDatabaseOptions(this IServiceCollection serviceCollection, ConfigurationManager configurationManager)
+    public static void AddDatabaseOptions(this IServiceCollection serviceCollection, ConfigurationManager configurationManager)
     {
         serviceCollection.Configure<DataSourceSettings>(configurationManager.GetSection(nameof(DataSourceSettings)));
         serviceCollection.Configure<DatabaseOptions>(configurationManager.GetSection(nameof(DatabaseOptions)));
         serviceCollection.Configure<KeyVaultOptions>(configurationManager.GetSection(nameof(KeyVaultOptions)));
-
-        return serviceCollection;
     }
 }
