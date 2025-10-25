@@ -33,18 +33,6 @@ internal class KeyVaultClient : IKeyVaultClient
     private void initializeSecretClient()
     {
         var keyVaultUrl = _options.Value.KeyVaultUrl;
-
-        var defaultAzureCredentialOptions = new DefaultAzureCredentialOptions
-        {
-            Diagnostics =
-            {
-                LoggedHeaderNames = { "x-ms-request-id" },
-                LoggedQueryParameters = { "api-version" },
-                IsLoggingContentEnabled = true,
-                IsAccountIdentifierLoggingEnabled = true
-            }
-        };
-        
-        _secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential(defaultAzureCredentialOptions));
+        _secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
     }
 }
