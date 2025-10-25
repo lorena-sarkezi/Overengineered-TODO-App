@@ -1,15 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Todo.App.Database;
-using Todo.App.Database.ConnectionProvider;
-using Todo.App.Database.ConnectionProvider.ConnectionStringProvider;
 using Todo.Base.Abstractions.DatabaseConnection;
-using Todo.Base.Attributes;
+using Todo.Infrastructure.Database;
+using Todo.Infrastructure.Database.ConnectionProvider;
+using Todo.Infrastructure.Database.ConnectionProvider.ConnectionStringProvider;
 
-namespace Todo.App.DependencyInjection;
+namespace Todo.Infrastructure.DependencyInjection;
 
-public static class DatabaseConnectionProvider
+public static class DatabaseConnection
 {
-    public static IServiceCollection AddDatabaseConnectionProviders(this IServiceCollection services)
+    public static IServiceCollection AddDatabase(this IServiceCollection services)
     {
         services.AddSingleton<IConnectionStringProvider, AppSettingsConnectionStringProvider>();
         services.AddSingleton<IConnectionStringProvider, KeyVaultConnectionStringProvider>();

@@ -5,7 +5,7 @@ using Todo.Base.ApplicationOptions;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
 
-namespace Todo.App.Database.ConnectionProvider;
+namespace Todo.Infrastructure.Database.ConnectionProvider;
 
 internal class ConnectionStringProviderProviderFactory : IConnectionStringProviderProviderFactory
 {

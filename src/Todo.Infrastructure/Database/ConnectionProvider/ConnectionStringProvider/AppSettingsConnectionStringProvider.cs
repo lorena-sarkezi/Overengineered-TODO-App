@@ -4,7 +4,7 @@ using Todo.Base.ApplicationOptions;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
 
-namespace Todo.App.Database.ConnectionProvider.ConnectionStringProvider;
+namespace Todo.Infrastructure.Database.ConnectionProvider.ConnectionStringProvider;
 
 [DataSourceType(DataSourceTypeEnum.AppSettings)]
 internal class AppSettingsConnectionStringProvider : IConnectionStringProvider

@@ -2,7 +2,7 @@
 using Todo.Base.Abstractions.DatabaseConnection;
 using Todo.Entities;
 
-namespace Todo.App.Database;
+namespace Todo.Infrastructure.Database;
 
 public class DefaultDbContextProvider : IDbContextProvider
 {

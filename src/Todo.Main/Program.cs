@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Todo.App.DependencyInjection;
 using Todo.Base.DependencyInjection;
 using Todo.Entities;
+using Todo.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
 builder.Services.AddDatabaseOptions(builder.Configuration);
-builder.Services.AddDatabaseConnectionProviders();
+builder.Services.AddDatabase();
 
 
 var app = builder.Build();
