@@ -7,14 +7,14 @@ using Todo.Base.Enums;
 
 namespace Todo.Infrastructure.Database.ConnectionProvider;
 
-internal class ConnectionStringProviderProviderFactory : IConnectionStringProviderProviderFactory
+internal class ConnectionStringProviderFactory : IConnectionStringProviderFactory
 {
     private readonly Dictionary<DataSourceTypeEnum, IConnectionStringProvider> _providersMapping;
     
     private readonly IOptions<DataSourceSettings> _dataSourceSettings;
     private readonly IEnumerable<IConnectionStringProvider> _databaseConnectionProviders;
 
-    public ConnectionStringProviderProviderFactory(
+    public ConnectionStringProviderFactory(
         IOptions<DataSourceSettings> dataSourceSettings, 
         IEnumerable<IConnectionStringProvider> databaseConnectionProviders)
     {

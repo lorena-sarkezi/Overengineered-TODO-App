@@ -6,16 +6,16 @@ namespace Todo.Infrastructure.Database;
 
 internal sealed class DefaultDbContextProvider : IDbContextProvider
 {
-    private readonly IConnectionStringProviderProviderFactory _connectionStringProviderProviderFactory;
+    private readonly IConnectionStringProviderFactory _connectionStringProviderFactory;
 
-    public DefaultDbContextProvider(IConnectionStringProviderProviderFactory connectionStringProviderProviderFactory)
+    public DefaultDbContextProvider(IConnectionStringProviderFactory connectionStringProviderFactory)
     {
-        _connectionStringProviderProviderFactory = connectionStringProviderProviderFactory;
+        _connectionStringProviderFactory = connectionStringProviderFactory;
     }
 
     public TodoAppContext GetDbContext()
     {
-        var connectionString = _connectionStringProviderProviderFactory.GetConnectionStringProvider().GetConnectionString();
+        var connectionString = _connectionStringProviderFactory.GetConnectionStringProvider().GetConnectionString();
         var options = new DbContextOptionsBuilder<TodoAppContext>()
             .UseSqlServer(connectionString)
             .Options;

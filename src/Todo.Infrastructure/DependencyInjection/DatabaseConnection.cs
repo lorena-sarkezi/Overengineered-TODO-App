@@ -13,7 +13,7 @@ public static class DatabaseConnection
         services.AddSingleton<IConnectionStringProvider, AppSettingsConnectionStringProvider>();
         services.AddSingleton<IConnectionStringProvider, KeyVaultConnectionStringProvider>();
         
-        services.AddTransient<IConnectionStringProviderProviderFactory, ConnectionStringProviderProviderFactory>();
+        services.AddTransient<IConnectionStringProviderFactory, ConnectionStringProviderFactory>();
         services.AddTransient<IDbContextProvider, DefaultDbContextProvider>();
         
         return services;

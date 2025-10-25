@@ -1,6 +1,6 @@
 ﻿namespace Todo.Base.Abstractions.DatabaseConnection;
 
-public interface IConnectionStringProviderProviderFactory
+public interface IConnectionStringProviderFactory
 {
     public IConnectionStringProvider GetConnectionStringProvider();
 }
