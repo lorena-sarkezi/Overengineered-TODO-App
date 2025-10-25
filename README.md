@@ -5,6 +5,7 @@ A little playground/training with concepts such as:
 * RBS - ordinary and admin user (admins can see and manage all TODOs), implementing RBS from scratch using JWT on frontend and backend
 * Database migration and versioning scripts - because this is a database-first project and no EF Core native migration/upgrade functionality is available
 * Playing with Zustand for global state management in React - https://github.com/pmndrs/zustand
+* *Big maybe* - Application Insights logging using `ILogger<T>`
 
 
 CLI Tools used/will be used:
