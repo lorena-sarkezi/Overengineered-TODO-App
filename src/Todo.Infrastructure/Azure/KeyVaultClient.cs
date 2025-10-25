@@ -20,21 +20,14 @@ internal class KeyVaultClient : IKeyVaultClient
     
     public async Task<string> Get(string key)
     {
-        try
-        {
-            var keyVaultSecret = await _secretClient.GetSecretAsync(key);
+        var keyVaultSecret = await _secretClient.GetSecretAsync(key);
 
-            if (!keyVaultSecret.HasValue)
-            {
-                throw new ArgumentNullException($"Key {key} does not exist");
-            }
-
-            return keyVaultSecret.Value.Value;
-        }
-        catch (Exception ex)
+        if (!keyVaultSecret.HasValue)
         {
-            throw;
+            throw new ArgumentNullException($"Key {key} does not exist");
         }
+
+        return keyVaultSecret.Value.Value;
     }
 
     private void initializeSecretClient()
