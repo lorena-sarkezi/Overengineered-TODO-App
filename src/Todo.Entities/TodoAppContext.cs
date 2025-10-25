@@ -1,14 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using Todo.Entities.Models;
 
 namespace Todo.Entities;
 
 public partial class TodoAppContext : DbContext
 {
-    public TodoAppContext()
-    {
-    }
-
     public TodoAppContext(DbContextOptions<TodoAppContext> options)
         : base(options)
     {
