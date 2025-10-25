@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Todo.Azure\Todo.Azure.csproj" />
       <ProjectReference Include="..\Todo.Base\Todo.Base.csproj" />
       <ProjectReference Include="..\Todo.Entities\Todo.Entities.csproj" />
       <ProjectReference Include="..\Todo.Infrastructure\Todo.Infrastructure.csproj" />

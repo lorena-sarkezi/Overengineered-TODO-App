@@ -9,10 +9,6 @@
     <ItemGroup>
       <PackageReference Include="Azure.Identity" Version="1.17.0" />
       <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.8.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0-rc.2.25502.107" />
-      <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0-rc.2.25502.107" />
-      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.0-rc.2.25502.107" />
-      <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="10.0.0-rc.2.25502.107" />
     </ItemGroup>
 
     <ItemGroup>

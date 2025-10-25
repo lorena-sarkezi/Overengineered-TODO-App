@@ -10,6 +10,7 @@ public static class ApplicationOptions
     {
         serviceCollection.Configure<DataSourceSettings>(configurationManager.GetSection(nameof(DataSourceSettings)));
         serviceCollection.Configure<DatabaseOptions>(configurationManager.GetSection(nameof(DatabaseOptions)));
+        serviceCollection.Configure<KeyVaultOptions>(configurationManager.GetSection(nameof(KeyVaultOptions)));
 
         return serviceCollection;
     }

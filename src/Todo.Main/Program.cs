@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Todo.Azure.DependencyInjection;
 using Todo.Base.DependencyInjection;
 using Todo.Entities;
 using Todo.Infrastructure.DependencyInjection;
@@ -16,9 +17,14 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 
+#region Add Services
+
 builder.Services.AddDatabaseOptions(builder.Configuration);
 builder.Services.AddDatabase();
+builder.Services.AddAzureInfrastructure();
+builder.Services.AddAzureServices();
 
+#endregion Add Services
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
