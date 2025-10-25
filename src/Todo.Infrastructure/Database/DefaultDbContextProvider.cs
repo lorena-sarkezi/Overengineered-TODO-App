@@ -4,7 +4,7 @@ using Todo.Entities;
 
 namespace Todo.Infrastructure.Database;
 
-public class DefaultDbContextProvider : IDbContextProvider
+internal sealed class DefaultDbContextProvider : IDbContextProvider
 {
     private readonly IConnectionStringProviderProviderFactory _connectionStringProviderProviderFactory;
 
