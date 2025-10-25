@@ -1,4 +1,4 @@
-#Heavy WIP
+# Heavy WIP
 
 A little playground/training with concepts such as:
 * configurable database connection string source (Appsettings or Azure KeyVault) through abstractions and a provider which returns the connection string with the consumer not knowing (or needing to care) where it's coming from 
