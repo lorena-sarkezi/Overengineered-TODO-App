@@ -1,11 +1,11 @@
-﻿using Todo.Base.Abstractions.Services.DatabaseConnection;
+﻿using Todo.Base.Abstractions.DatabaseConnection;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
 
-namespace Todo.App.Database.DatabaseConnectionProvider;
+namespace Todo.App.Database.ConnectionProvider.ConnectionStringProvider;
 
 [DataSourceType(DataSourceTypeEnum.AzureKeyVault)]
-internal class KeyVaultDatabaseConnectionProvider : IDatabaseConnectionProvider
+internal class KeyVaultConnectionStringProvider : IConnectionStringProvider
 {
     public string GetConnectionString()
     {

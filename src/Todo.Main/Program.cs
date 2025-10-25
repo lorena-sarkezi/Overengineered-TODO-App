@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Todo.App.DependencyInjection;
 using Todo.Base.DependencyInjection;
+using Todo.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +20,7 @@ builder.Services.AddDatabaseOptions(builder.Configuration);
 builder.Services.AddDatabaseConnectionProviders();
 
 
-
-
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

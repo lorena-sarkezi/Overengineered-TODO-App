@@ -1,33 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 using Microsoft.Extensions.Options;
-using Todo.Base.Abstractions.Services.DatabaseConnection;
+using Todo.Base.Abstractions.DatabaseConnection;
 using Todo.Base.ApplicationOptions;
 using Todo.Base.Attributes;
 using Todo.Base.Enums;
 
-namespace Todo.App.Database;
+namespace Todo.App.Database.ConnectionProvider;
 
-internal class DatabaseConnectionProviderFactory : IDatabaseConnectionProviderFactory
+internal class ConnectionStringProviderProviderFactory : IConnectionStringProviderProviderFactory
 {
-    private readonly Dictionary<DataSourceTypeEnum, IDatabaseConnectionProvider> _providersMapping;
+    private readonly Dictionary<DataSourceTypeEnum, IConnectionStringProvider> _providersMapping;
     
     private readonly IOptions<DataSourceSettings> _dataSourceSettings;
-    private readonly IEnumerable<IDatabaseConnectionProvider> _databaseConnectionProviders;
+    private readonly IEnumerable<IConnectionStringProvider> _databaseConnectionProviders;
 
-    public DatabaseConnectionProviderFactory(
+    public ConnectionStringProviderProviderFactory(
         IOptions<DataSourceSettings> dataSourceSettings, 
-        IEnumerable<IDatabaseConnectionProvider> databaseConnectionProviders)
+        IEnumerable<IConnectionStringProvider> databaseConnectionProviders)
     {
         _dataSourceSettings = dataSourceSettings;
         _databaseConnectionProviders = databaseConnectionProviders;
         
-        _providersMapping = new Dictionary<DataSourceTypeEnum, IDatabaseConnectionProvider>();
+        _providersMapping = new Dictionary<DataSourceTypeEnum, IConnectionStringProvider>();
         ensureDataSourceConnectionProviders();
     }
 
-    public IDatabaseConnectionProvider GetDatabaseConnectionProvider()
+    public IConnectionStringProvider GetConnectionStringProvider()
     {
         var currentDataSourceSetting = Enum.Parse<DataSourceTypeEnum>(_dataSourceSettings.Value.ConnectionStringSource);
         return _providersMapping[currentDataSourceSetting];
