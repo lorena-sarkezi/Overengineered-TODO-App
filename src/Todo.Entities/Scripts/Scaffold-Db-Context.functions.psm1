@@ -1,4 +1,4 @@
-$appSettingsPath = "..\Todo.Main\appsettings.json" 
+$appSettingsPath = "..\..\Todo.Main\appsettings.json" 
 
 function Get-ConnectionStringFromAppSettings {
     $appSettingsJsonObject =  Get-Content -Path $appSettingsPath | ConvertFrom-Json
