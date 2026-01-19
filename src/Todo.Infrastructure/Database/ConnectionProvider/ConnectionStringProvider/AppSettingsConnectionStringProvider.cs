@@ -15,8 +15,8 @@ internal class AppSettingsConnectionStringProvider : IConnectionStringProvider
         _options = options;
     }
 
-    public string GetConnectionString()
+    public Task<string> GetConnectionString()
     {
-        return _options.Value.ConnectionString;
+        return Task.FromResult(_options.Value.ConnectionString);
     }
 }

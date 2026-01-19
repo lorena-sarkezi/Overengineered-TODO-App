@@ -4,5 +4,5 @@ namespace Todo.Base.Abstractions.DatabaseConnection;
 
 public interface IDbContextProvider
 {
-    public TodoAppContext GetDbContext();
+    public Task<TodoAppContext> GetDbContext();
 }

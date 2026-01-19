@@ -16,8 +16,8 @@ internal class KeyVaultConnectionStringProvider : IConnectionStringProvider
         _keyVaultService = keyVaultService;
     }
     
-    public string GetConnectionString()
+    public async Task<string> GetConnectionString()
     {
-        return _keyVaultService.GetSecretValue(AppConstants.KeyVaultConnectionStringKey).GetAwaiter().GetResult();
+        return await _keyVaultService.GetSecretValue(AppConstants.KeyVaultConnectionStringKey);
     }
 }

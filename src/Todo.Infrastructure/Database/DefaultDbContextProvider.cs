@@ -13,9 +13,9 @@ internal sealed class DefaultDbContextProvider : IDbContextProvider
         _connectionStringProviderFactory = connectionStringProviderFactory;
     }
 
-    public TodoAppContext GetDbContext()
+    public async Task<TodoAppContext> GetDbContext()
     {
-        var connectionString = _connectionStringProviderFactory.GetConnectionStringProvider().GetConnectionString();
+        var connectionString = await _connectionStringProviderFactory.GetConnectionStringProvider().GetConnectionString();
         var options = new DbContextOptionsBuilder<TodoAppContext>()
             .UseSqlServer(connectionString)
             .Options;
