@@ -1,13 +1,7 @@
-using System;
-using System.Linq;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Todo.Azure.DependencyInjection;
 using Todo.Base.DependencyInjection;
-using Todo.Entities;
 using Todo.Infrastructure.DependencyInjection;
+using NextjsStaticHosting.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,9 +18,14 @@ builder.Services.AddDatabase();
 builder.Services.AddAzureInfrastructure();
 builder.Services.AddAzureServices();
 
+
+builder.Services.Configure<NextjsStaticHostingOptions>(builder.Configuration.GetSection("NextjsStaticHosting"));
+builder.Services.AddNextjsStaticHosting();
+
 #endregion Add Services
 
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -35,4 +34,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.MapControllers();
+
+app.MapNextjsStaticHtmls();
+app.UseNextjsStaticHosting();
+
 app.Run();
