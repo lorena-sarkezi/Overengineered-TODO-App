@@ -2,6 +2,8 @@ using Todo.Azure.DependencyInjection;
 using Todo.Base.DependencyInjection;
 using Todo.Infrastructure.DependencyInjection;
 using NextjsStaticHosting.AspNetCore;
+using Todo.Application.DependencyInjection;
+using Todo.Repository.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,8 @@ builder.Services.AddDatabaseOptions(builder.Configuration);
 builder.Services.AddDatabase();
 builder.Services.AddAzureInfrastructure();
 builder.Services.AddAzureServices();
+builder.Services.AddServices();
+builder.Services.AddRepositories();
 
 
 builder.Services.Configure<NextjsStaticHostingOptions>(builder.Configuration.GetSection("NextjsStaticHosting"));

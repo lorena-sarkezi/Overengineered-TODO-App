@@ -9,9 +9,9 @@ public partial class TodoCollection
 
     public int UserId { get; set; }
 
-    public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
-    public DateTime? CreatedOn { get; set; }
+    public DateTime CreatedOn { get; set; }
 
     public bool IsCompleted { get; set; }
 

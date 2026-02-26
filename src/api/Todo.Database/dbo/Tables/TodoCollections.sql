@@ -2,8 +2,8 @@
 (
     [Id] INT IDENTITY(1,1),
     [UserId] INT NOT NULL,
-    [Name] NVARCHAR(512),
-    [CreatedOn] DATETIME,
+    [Name] NVARCHAR(512) NOT NULL,
+    [CreatedOn] DATETIME NOT NULL DEFAULT GETUTCDATE(),
     [IsCompleted] BIT NOT NULL DEFAULT 0,
     [IsDeleted] BIT NOT NULL DEFAULT 0,
     

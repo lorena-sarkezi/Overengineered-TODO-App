@@ -3,8 +3,8 @@
     [Id] INT NOT NULL IDENTITY(1,1),
     [TodoCollectionId] INT NOT NULL,
     [UserId] INT NOT NULL,
-    [Text] NVARCHAR(MAX),
-    [CreatedOn] DATETIME,
+    [Text] NVARCHAR(MAX) NOT NULL,
+    [CreatedOn] DATETIME NOT NULL DEFAULT GETUTCDATE(),
     [IsCompleted] BIT NOT NULL DEFAULT 0,
     [IsDeleted] BIT NOT NULL DEFAULT 0,
     

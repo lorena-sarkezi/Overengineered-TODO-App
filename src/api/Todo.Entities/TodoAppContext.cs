@@ -24,7 +24,9 @@ public partial class TodoAppContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK_Todos");
 
-            entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+            entity.Property(e => e.CreatedOn)
+                .HasDefaultValueSql("(getutcdate())")
+                .HasColumnType("datetime");
             entity.Property(e => e.Name).HasMaxLength(512);
 
             entity.HasOne(d => d.User).WithMany(p => p.TodoCollections)
@@ -37,7 +39,9 @@ public partial class TodoAppContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK_TodoEntry");
 
-            entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+            entity.Property(e => e.CreatedOn)
+                .HasDefaultValueSql("(getutcdate())")
+                .HasColumnType("datetime");
 
             entity.HasOne(d => d.TodoCollection).WithMany(p => p.TodoItems)
                 .HasForeignKey(d => d.TodoCollectionId)
