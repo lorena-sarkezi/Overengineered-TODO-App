@@ -30,6 +30,9 @@ builder.Services.AddNextjsStaticHosting();
 
 var app = builder.Build();
 
+// TODO: if any more app initialisation steps are needed (very likely), move them all to a dedicated service or something like ITodoApplication, with support for DI
+await app.Services.MigrateDatabaseAsync();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
