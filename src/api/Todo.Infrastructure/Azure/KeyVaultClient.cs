@@ -8,7 +8,7 @@ namespace Todo.Infrastructure.Azure;
 
 internal class KeyVaultClient : IKeyVaultClient
 {
-    private SecretClient  _secretClient;
+    private SecretClient  _secretClient = null!;
     
     private readonly IOptions<KeyVaultOptions> _options;
 
