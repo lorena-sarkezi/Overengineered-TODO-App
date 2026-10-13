@@ -23,8 +23,11 @@ builder.Services.AddServices();
 builder.Services.AddRepositories();
 
 
+#if !DEBUG
 builder.Services.Configure<NextjsStaticHostingOptions>(builder.Configuration.GetSection("NextjsStaticHosting"));
 builder.Services.AddNextjsStaticHosting();
+#endif
+
 
 #endregion Add Services
 
@@ -42,7 +45,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapControllers();
 
+#if !DEBUG
 app.MapNextjsStaticHtmls();
 app.UseNextjsStaticHosting();
+#endif
+
 
 app.Run();
